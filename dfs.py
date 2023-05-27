@@ -15,12 +15,12 @@ def dfs(graph, start):
                 if neighbor not in visited:
                     stack.append((neighbor, distance + step))
 
-# Пример графа с длиной шага между вершинами
+# Пример графа
 graph = {
-    1: [(3, 2)],
-    2: [(4, 1)],
+    1: [3],
+    2: [4],
     3: [],
-    4: [(2, 3)]
+    4: [23]
 }
 
 # Запуск обхода в глубину 1
