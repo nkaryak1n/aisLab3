@@ -9,11 +9,8 @@ def dfs(graph, start):
             visited.add(vertex)  # Посещаем вершину
             print(vertex, distance)  # Можно изменить на сохранение в путь
 
-            # Добавляем непосещенные соседние вершины с учетом расстояния в стек
-            neighbors = graph[vertex]
-            for neighbor, step in neighbors:
-                if neighbor not in visited:
-                    stack.append((neighbor, distance + step))
+            # Добавляем непосещенные соседние вершины в стек
+            stack.extend([neighbor for neighbor in graph[vertex] if neighbor not in vertex]
 
 # Пример графа с длиной шага между вершинами
 graph = {
